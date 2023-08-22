@@ -16,7 +16,7 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="text-primary-100 bg-primary py-14">
+	<body class="text-primary-100 bg-primary py-14 min-w-[350px] space-y-24">
 		<slot />
 	</body>
 </html>
@@ -30,8 +30,18 @@ const { title } = Astro.props;
   .container {
     @apply mx-auto px-5 max-w-3xl;
   }
-
   .text-gradient {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-secondary to-secondary-300;
+  }
+  .sectionheader > h2,
+  .sectionheader > h3,
+  .sectionheader > h4,
+  .sectionheader > h5 {
+    font-size: 3rem; 
+    margin-bottom: -0.7rem;
+    @apply font-bold text-gradient;
+  }
+  .sectionheader > p {
+    font-size: 1.5rem; 
   }
 </style>

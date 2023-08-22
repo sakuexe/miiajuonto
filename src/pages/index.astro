@@ -1,26 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Blobs from "../components/blobs.astro";
+import Header from "./_header.astro"
+import About from "./_about.astro"
+import Experiences from "./_experiences.astro"
+import Partners from "./_partners.astro"
 ---
 
 <Layout title="Miia Raussi - Juontaja">
-  <header class="space-y-3 container relative overflow-hidden">
-    <h1 class="text-[6rem] leading-[0.85] font-bold text-gradient select-none">
-      Miia Raussi
-    </h1>
-    <p class="text-3xl leading-[1.2]">Juontaja</p>
-    <p class="opacity-80">
-      Aliquet egestas enim porta libero vitae facilisi ridiculus. Amet purus a
-      interdum lacus interdum a nec luctus. Vel in est sit in orci orci ipsum
-      cursus fringilla. Morbi imperdiet dictum adipiscing amet sed ligula.
-    </p>
-    <img src="./images/amorkuva.png" alt="Kuva Miiasta amor asussaan">
-    <div class="absolute -bottom-28 -right-20 w-full scale-150 -z-10">
-      <Blobs type="header" colorClass="fill-secondary-300 opacity-25"/>
-    </div>
-    <div class="absolute -bottom-36 -left-20 w-full scale-150 rotate-45 -z-10">
-      <Blobs type="header" colorClass="fill-secondary-300 opacity-10"/>
-    </div>
-    <div class="bg-gradient-to-t from-primary to-transparent h-1/3 w-full absolute bottom-0 left-0"></div>
-  </header>
+  <Header/>
+  <About/>
+  <Experiences/>
+  <Partners/>
 </Layout>

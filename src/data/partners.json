@@ -1,0 +1,26 @@
+[
+  {
+    "business": "Yritys #1",
+    "description": "Faucibus sed nec ipsum ac purus. Quam lacus nisl tincidunt cursus consectetur. Lorem aenean purus quam massa. Nunc non elementum nisi in justo eget placerat purus. Pretium feugiat egestas porttitor enim amet est at penatibus augue.",
+    "name": "Etunimi Sukunimi",
+    "logo": "placeholder1.svg"
+  },
+  {
+    "business": "Yritys #2",
+    "description": "Faucibus sed nec ipsum ac purus. Quam lacus nisl tincidunt cursus consectetur. Lorem aenean purus quam massa. Nunc non elementum nisi in justo eget placerat purus",
+    "name": "Etunimi Sukunimi",
+    "logo": "placeholder2.svg"
+  },
+  {
+    "business": "Yritys #1",
+    "description": "Faucibus sed nec ipsum ac purus. Quam lacus nisl tincidunt cursus consectetur. Lorem aenean purus quam massa. Nunc non elementum nisi in justo eget placerat purus. Pretium feugiat egestas porttitor enim amet est at penatibus augue.",
+    "name": "Etunimi Sukunimi",
+    "logo": "placeholder1.svg"
+  },
+  {
+    "business": "Yritys #2",
+    "description": "Faucibus sed nec ipsum ac purus. Quam lacus nisl tincidunt cursus consectetur. Lorem aenean purus quam massa. Nunc non elementum nisi in justo eget placerat purus",
+    "name": "Etunimi Sukunimi",
+    "logo": "placeholder2.svg"
+  }
+]

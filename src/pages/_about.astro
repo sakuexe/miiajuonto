@@ -1,0 +1,42 @@
+---
+import Blobs from "../components/blobs.astro";
+---
+
+<main class="container space-y-5 relative overflow-hidden">
+  <div class="sectionheader">
+    <h2>Esittely</h2>
+    <p>Millainen on Miia?</p>
+  </div>
+  <p class="opacity-80">
+    Aliquet egestas enim porta libero vitae facilisi ridiculus. Amet purus a
+    interdum lacus interdum a nec luctus. Vel in est sit in orci orci ipsum
+    cursus fringilla. Morbi imperdiet dictum adipiscing amet sed ligula. Aliquet
+    egestas enim porta libero vitae facilisi ridiculus. Amet purus a interdum
+    lacus interdum a nec luctus. Vel in est sit in orci orci ipsum cursus
+    fringilla. Morbi imperdiet dictum adipiscing amet sed ligula.
+  </p>
+  <p class="opacity-80">
+    Aliquet egestas enim porta libero vitae facilisi ridiculus. Amet purus a
+    interdum lacus interdum a nec luctus. Vel in est sit in orci orci ipsum
+    cursus fringilla. Morbi imperdiet dictum adipiscing amet sed ligula.
+  </p>
+  <img src="./images/amorit.png" alt="Miia ja Miikka, hämeenlinnan amorit" />
+  <div class="absolute bottom-0 left-0 w-full h-full">
+    <Blobs
+      type="about-2"
+      className="absolute -bottom-16 -left-20 scale-90 opacity-25 -z-20"
+    />
+    <Blobs
+      type="about-1"
+      className="absolute -bottom-12 -right-14 -rotate-6 opacity-10 -z-20"
+    />
+    <div
+      class="absolute bottom-0 left-0 h-1/4 w-full bg-gradient-to-t from-primary to-transparent"
+    >
+    </div>
+    <div
+      class="absolute bottom-0 left-0 h-full w-full bg-gradient-to-l from-primary to-transparent -z-10 opacity-75"
+    >
+    </div>
+  </div>
+</main>
