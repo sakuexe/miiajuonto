@@ -1,15 +1,35 @@
 ---
 import Blobs from "../components/blobs.astro";
 import partners from "../data/partners.json";
+
+type ShowcasedPartner = {
+  business: string;
+  description: string;
+  name: string;
+  logo: string;
+};
+
+type OtherPartner = {
+  business: string;
+  logo: string;
+};
+
+function isShowcasedPartner(
+  partner: ShowcasedPartner | OtherPartner
+): partner is ShowcasedPartner {
+  return "description" in partner;
+}
+
+const showcasedPartners: ShowcasedPartner[] = partners.filter(isShowcasedPartner);
 ---
 
-<article class="container space-y-8">
+<article class="mx-auto max-w-3xl space-y-8">
   <div class="sectionheader">
-    <h4 class="mb-0 leading-[1.1]">Yhteistyö kumppaneita</h4>
+    <h2 class="mb-0 leading-[1.1]">Yhteistyö kumppaneita</h2>
   </div>
   <div class="grid grid-flow-col gap-x-6 overflow-x-scroll py-5 px-2">
     {
-      partners.map((partner, index: number) => (
+      showcasedPartners.map((partner: ShowcasedPartner, index: number) => (
         <div
           class={`flex flex-col justify-center items-center gap-y-3 w-80 p-6
             shadow-black shadow-lg rounded-xl relative overflow-hidden isolate

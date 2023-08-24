@@ -1,0 +1,42 @@
+---
+import partners from "../data/partners.json";
+
+type ShowcasedPartner = {
+  business: string;
+  description: string;
+  name: string;
+  logo: string;
+};
+
+type OtherPartner = {
+  business: string;
+  logo: string;
+};
+
+function isOtherPartner(
+  partner: ShowcasedPartner | OtherPartner
+): partner is OtherPartner {
+  return !("description" in partner);
+}
+
+const otherPartners = partners.filter((partner) => isOtherPartner(partner));
+---
+
+<section class="container space-y-5">
+  <div class="sectionheader">
+    <h3 class="text-center">Muita työkumppaneita</h3>
+  </div>
+  <div class="grid grid-flow-col space-x-8 mx-auto py-4 overflow-x-auto">
+    {
+      otherPartners.map((partner) => (
+        <div class="inline-block object-contain w-20 aspect-square">
+          <img
+            class="w-full h-full"
+            src={`./businesses/${partner.logo}`}
+            alt={`yrityksen ${partner.logo} -logo`}
+          />
+        </div>
+      ))
+    }
+  </div>
+</section>

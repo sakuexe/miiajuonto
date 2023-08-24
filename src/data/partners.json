@@ -22,5 +22,25 @@
     "description": "Faucibus sed nec ipsum ac purus. Quam lacus nisl tincidunt cursus consectetur. Lorem aenean purus quam massa. Nunc non elementum nisi in justo eget placerat purus",
     "name": "Etunimi Sukunimi",
     "logo": "placeholder2.svg"
+  },
+  {
+    "business": "Yritys #3",
+    "logo": "placeholder-square.svg"
+  },
+  {
+    "business": "Yritys #4",
+    "logo": "placeholder-square-2.svg"
+  },
+  {
+    "business": "Yritys #5",
+    "logo": "placeholder-square.svg"
+  },
+  {
+    "business": "Yritys #6",
+    "logo": "placeholder-square-2.svg"
+  },
+  {
+    "business": "Yritys #7",
+    "logo": "placeholder-square.svg"
   }
 ]

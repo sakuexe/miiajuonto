@@ -1,0 +1,26 @@
+[
+  {
+    "name": "instagram",
+    "tag": "@miiaraussi",
+    "url": "https://www.instagram.com/miiaraussi/",
+    "icon": "instagram-logo.svg"
+  },
+  {
+    "name": "facebook",
+    "tag": "Miia Raussi",
+    "url": "https://www.facebook.com/miia.raussi",
+    "icon": "facebook-logo.svg"
+  },
+  {
+    "name": "linkedin",
+    "tag": "miia-raussi",
+    "url": "https://www.linkedin.com/in/miia-raussi-ba3814187/",
+    "icon": "linkedin-logo.svg"
+  },
+  {
+    "name": "email",
+    "tag": "miia.raussi@hotmail.com",
+    "url": "mailto:miia.raussi@hotmail.com",
+    "icon": "email.svg"
+  }
+]
