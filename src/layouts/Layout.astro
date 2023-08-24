@@ -16,7 +16,7 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="text-primary-100 bg-primary pt-14 min-w-[350px] space-y-24">
+	<body class="text-primary-100 bg-primary min-w-[350px] space-y-24">
 		<slot />
 	</body>
 </html>
@@ -28,7 +28,7 @@ const { title } = Astro.props;
 		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
 	}
   .container {
-    @apply mx-auto px-5 max-w-3xl;
+    @apply mx-auto px-5 max-w-5xl;
   }
   .text-gradient {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-secondary to-secondary-300;
