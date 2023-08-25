@@ -3,8 +3,8 @@ import Blobs from "../components/blobs.astro";
 ---
 
 <header class="relative overflow-hidden pt-14">
-  <div class="container flex flex-col gap-y-3 md:flex-row">
-    <div class="space-y-3 z-10 max-w-xl md:max-w-md self-center">
+  <div class="container flex flex-col justify-between gap-y-3 md:flex-row">
+    <div class="space-y-3 z-10 max-w-xl md:max-w-md lg:max-w-xl self-center">
       <h1
         class="text-[6rem] leading-[0.85] font-bold text-gradient select-none"
       >
@@ -31,7 +31,7 @@ import Blobs from "../components/blobs.astro";
       </div>
     </div>
     <div class="relative md:pt-8">
-    <picture class="self-end w-full">
+    <picture class="self-end w-full mx-auto">
       <source media="(min-width: 768px)" srcset="./images/amorkuva.png" />
       <img
         src="./images/amorkuva.png"
