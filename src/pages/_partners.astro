@@ -62,13 +62,6 @@ const showcasedPartners: ShowcasedPartner[] =
       ))
     }
   </div>
-  <div class="flex items-center justify-center gap-x-5 w-3/4 mx-auto">
-    {
-      showcasedPartners.map((_) => (
-        <div class="indicator w-5 aspect-square rounded-full bg-primary-900" />
-      ))
-    }
-  </div>
 </article>
 
 <script>
@@ -77,28 +70,9 @@ const showcasedPartners: ShowcasedPartner[] =
   and scrollable with mouse on desktop the same way as touch on mobile
 */
   const slider: HTMLDivElement | null = document.querySelector("#carousel");
-  const indicators: NodeListOf<HTMLDivElement> = document.querySelectorAll(".indicator")
   let isDown: boolean = false;
   let startX: number;
   let scrollLeft: number;
-  let highlightIndex: number = 0;
-
-  function updateIndicators() {
-    indicators.forEach((indicator, index) => {
-      if (index === highlightIndex) {
-        indicator.classList.remove("bg-primary-900");
-        indicator.classList.add("bg-secondary-400");
-      } else {
-        indicator.classList.remove("bg-secondary-400");
-        indicator.classList.add("bg-primary-900");
-      }
-    })
-  }
-
-  function checkHighlight() {
-    highlightIndex = Math.floor((slider?.scrollLeft || 1) / 252);
-    updateIndicators()
-  }
 
   slider?.addEventListener("mousedown", (event) => {
     isDown = true;
@@ -121,12 +95,6 @@ const showcasedPartners: ShowcasedPartner[] =
     const scrollSpeed: number = 1;
     const walk: number = (x - startX) * scrollSpeed;
     slider.scrollLeft = scrollLeft - walk;
-    checkHighlight();
   });
 
-  slider?.addEventListener("scroll", (_) => {
-    checkHighlight();
-  })
-
-  checkHighlight()
 </script>
