@@ -20,14 +20,18 @@ function isShowcasedPartner(
   return "description" in partner;
 }
 
-const showcasedPartners: ShowcasedPartner[] = partners.filter(isShowcasedPartner);
+const showcasedPartners: ShowcasedPartner[] =
+  partners.filter(isShowcasedPartner);
 ---
 
-<article class="mx-auto max-w-3xl space-y-8">
+<article class="container space-y-8">
   <div class="sectionheader">
-    <h2 class="mb-0 leading-[1.1]">Yhteistyö kumppaneita</h2>
+    <h2 class="mb-0 leading-snug">Yhteistyö&shy;kumppaneita</h2>
   </div>
-  <div class="grid grid-flow-col gap-x-6 overflow-x-scroll py-5 px-2">
+  <div
+    id="carousel"
+    class="grid grid-flow-col gap-x-6 overflow-x-scroll py-5 px-2"
+  >
     {
       showcasedPartners.map((partner: ShowcasedPartner, index: number) => (
         <div
@@ -38,10 +42,11 @@ const showcasedPartners: ShowcasedPartner[] = partners.filter(isShowcasedPartner
           <img
             src={`./icons/${partner.logo}`}
             alt={`${partner.business} -logo`}
-            class="w-1/2"
+            class="w-1/2 select-none"
+            draggable="false"
           />
-          <p class="text-center">{partner.description}</p>
-          <div class="text-center">
+          <p class="text-center select-none">{partner.description}</p>
+          <div class="text-center select-none">
             <p class="italic mb">- {partner.name}</p>
             <p class="italic">{partner.business}</p>
           </div>
@@ -58,11 +63,70 @@ const showcasedPartners: ShowcasedPartner[] = partners.filter(isShowcasedPartner
     }
   </div>
   <div class="flex items-center justify-center gap-x-5 w-3/4 mx-auto">
-    <div class="w-5 aspect-square rounded-full bg-secondary"></div>
-    <div class="w-5 aspect-square rounded-full bg-primary-700"></div>
-    <div class="w-5 aspect-square rounded-full bg-primary-700"></div>
-    <div class="w-5 aspect-square rounded-full bg-primary-700"></div>
-    <div class="w-5 aspect-square rounded-full bg-primary-700"></div>
-    <div class="w-5 aspect-square rounded-full bg-primary-700"></div>
+    {
+      showcasedPartners.map((_) => (
+        <div class="indicator w-5 aspect-square rounded-full bg-primary-900" />
+      ))
+    }
   </div>
 </article>
+
+<script>
+  /*
+  Script for making the product sliders at the end of the page work
+  and scrollable with mouse on desktop the same way as touch on mobile
+*/
+  const slider: HTMLDivElement | null = document.querySelector("#carousel");
+  const indicators: NodeListOf<HTMLDivElement> = document.querySelectorAll(".indicator")
+  let isDown: boolean = false;
+  let startX: number;
+  let scrollLeft: number;
+  let highlightIndex: number = 0;
+
+  function updateIndicators() {
+    indicators.forEach((indicator, index) => {
+      if (index === highlightIndex) {
+        indicator.classList.remove("bg-primary-900");
+        indicator.classList.add("bg-secondary-400");
+      } else {
+        indicator.classList.remove("bg-secondary-400");
+        indicator.classList.add("bg-primary-900");
+      }
+    })
+  }
+
+  function checkHighlight() {
+    highlightIndex = Math.floor((slider?.scrollLeft || 1) / 252);
+    updateIndicators()
+  }
+
+  slider?.addEventListener("mousedown", (event) => {
+    isDown = true;
+    slider.classList.add("mouse-hold");
+    startX = event.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+  });
+  slider?.addEventListener("mouseleave", (_) => {
+    isDown = false;
+    slider.classList.remove("mouse-hold");
+  });
+  slider?.addEventListener("mouseup", (_) => {
+    isDown = false;
+    slider.classList.remove("mouse-hold");
+  });
+  slider?.addEventListener("mousemove", (event) => {
+    if (!isDown) return;
+    event.preventDefault();
+    const x: number = event.pageX - slider.offsetLeft;
+    const scrollSpeed: number = 1;
+    const walk: number = (x - startX) * scrollSpeed;
+    slider.scrollLeft = scrollLeft - walk;
+    checkHighlight();
+  });
+
+  slider?.addEventListener("scroll", (_) => {
+    checkHighlight();
+  })
+
+  checkHighlight()
+</script>
