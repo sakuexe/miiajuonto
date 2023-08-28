@@ -1,21 +1,74 @@
-<section id="kokemuksia" class="container space-y-5">
+---
+import experiences from "../data/experiences.json";
+---
+
+<section id="kokemuksia" class="container space-y-5 mt-10">
   <div class="sectionheader">
     <h2>Kokemuksia</h2>
     <p>Sieltä sun täältä</p>
   </div>
-  <div class="imagecarousel">
-    <div class="relative">
-      <img
-        src="./images/experiences/linnanbisnesturnajaiset_2023.jpg"
-        alt="Kuva linnan business turjaisista"
-        class="grayscale"
-      />
-      <div class="absolute inset-0 m-auto w-full h-full bg-secondary-300 mix-blend-color opacity-50"/>
-      <div class="absolute left-0 bottom-0 w-full h-1/2 bg-gradient-to-t from-primary to-transparent
-        flex flex-col justify-end items-center">
-        <p class="text-lg font-bold">Linnan Business Turnajaiset - 2023</p>
-        <p>pp.kk.vvvv</p>
-      </div>
+  <div class="relative grid grid-cols-fluid gap-5 overflow-hidden max-h-96">
+    {
+      experiences.map((experience, index) => (
+        <div class="relative rounded-lg overflow-hidden aspect-square">
+          <img
+            src={`./images/experiences/${experience.image}`}
+            alt={experience.alt}
+            loading="lazy"
+            class="grayscale w-full h-full object-cover object-center"
+          />
+          <div class="absolute bottom-0 w-full text-center py-2 px-4 z-10">
+            <h4 class="text-lg font-bold leading-snug">{experience.title}</h4>
+            <p>{experience.date}</p>
+          </div>
+          <div class="w-full h-full bg-secondary absolute inset-0 m-auto mix-blend-color opacity-25" />
+          <div class="w-full h-1/2 bg-gradient-to-t from-primary to-transparent absolute bottom-0 left-0" />
+        </div>
+      ))
+    }
+    <button
+      id="show-all"
+      class="absolute -bottom-0 z-10 w-full py-5 hover:underline"
+      >Näytä kaikki</button
+    >
+    <div
+      id="feather-gradient"
+      class="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-primary to-transparent"
+    >
     </div>
   </div>
 </section>
+
+<script>
+  const experiencesGrid = document.querySelector(
+    "div.relative.grid"
+  ) as HTMLDivElement;
+  const featherGradient = document.querySelector(
+    "div#feather-gradient"
+  ) as HTMLDivElement;
+  const showAllButton = document.querySelector(
+    "button#show-all"
+  ) as HTMLButtonElement;
+
+  function checkGridHeight() {
+    if (experiencesGrid?.offsetHeight < experiencesGrid?.scrollHeight) {
+      showAllButton?.classList.remove("hidden");
+      featherGradient?.classList.remove("hidden");
+      return;
+    }
+    showAllButton?.classList.add("hidden");
+    featherGradient?.classList.add("hidden");
+  }
+
+  window.onresize = checkGridHeight;
+
+  // functionality for show all button
+  showAllButton?.addEventListener("click", () => {
+    showAllButton.classList.add("hidden");
+    experiencesGrid?.classList.remove("max-h-96");
+    featherGradient?.classList.add("hidden");
+  });
+
+  // check if grid is overflowing on load
+  window.onload = checkGridHeight;
+</script>

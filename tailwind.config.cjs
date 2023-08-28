@@ -53,6 +53,9 @@ module.exports = {
         secondary: { ...secondary, DEFAULT: secondary[500] },
         thunder,
       },
+      gridTemplateColumns: {
+        fluid: "repeat(auto-fit, minmax(14rem, 1fr))",
+      },
       textShadow: {
         sm: "0 1px 2px var(--tw-shadow-color)",
         DEFAULT: "0 2px 4px var(--tw-shadow-color)",
@@ -81,7 +84,7 @@ module.exports = {
     },
   },
   plugins: [
-    plugin(function ({ matchUtilities, theme }) {
+    plugin(function({ matchUtilities, theme }) {
       matchUtilities(
         {
           "text-shadow": (value) => ({
