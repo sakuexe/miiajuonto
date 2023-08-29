@@ -70,7 +70,6 @@ import Blobs from "../components/blobs.astro";
       (window.innerWidth > breakPoint && isAboutShowing)
     ) {
       image.classList.remove("translate-y-full");
-      window.removeEventListener("scroll", animateIntoView);
     }
   }
 
