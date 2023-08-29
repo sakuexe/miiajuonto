@@ -1,5 +1,8 @@
 ---
 import Blobs from "../components/blobs.astro";
+import contactInfo from "../data/contactinfo.json";
+
+const socials = contactInfo.filter((item) => item.type === "social");
 ---
 
 <header class="relative overflow-hidden pt-14">
@@ -19,26 +22,35 @@ import Blobs from "../components/blobs.astro";
       <div
         class="absolute bottom-0 left-0 flex gap-x-3 px-8 [&>a>img]:w-7 [&>a>img]:aspect-square md:static md:px-0"
       >
-        <a href="#" class="transition-all hover:brightness-75">
-          <img src="./icons/instagram-logo.svg" alt="instagram logo" />
-        </a>
-        <a href="#" class="transition-all hover:brightness-75">
-          <img src="./icons/facebook-logo.svg" alt="facebook logo" />
-        </a>
-        <a href="#" class="transition-all hover:brightness-75">
-          <img src="./icons/linkedin-logo.svg" alt="linkedin logo" />
-        </a>
+        {
+          socials.map((social) => (
+            <a
+              href={social.url}
+              target="_blank"
+              class="relative transition-all group hover:brightness-75"
+            >
+              <img src={`./icons/${social.icon}`} alt={`${social.name} logo`} />
+              <p
+                class="absolute -bottom-10 left-1/2 -translate-x-1/2 bg-primary-900
+                p-1 rounded-lg shadow-neutral-900 shadow-xl opacity-0 transition-all
+                whitespace-nowrap group-hover:opacity-100"
+              >
+                {social.tag}
+              </p>
+            </a>
+          ))
+        }
       </div>
     </div>
     <div class="relative md:pt-8">
-    <picture class="self-end w-full mx-auto">
-      <source media="(min-width: 768px)" srcset="./images/amorkuva.png" />
-      <img
-        src="./images/amorkuva.png"
-        alt="Kuva Miiasta amor asussaan"
-        class="max-w-md mx-auto"
-      />
-    </picture>
+      <picture class="self-end w-full mx-auto">
+        <source media="(min-width: 768px)" srcset="./images/amorkuva.png" />
+        <img
+          src="./images/amorkuva.png"
+          alt="Kuva Miiasta amor asussaan"
+          class="max-w-md mx-auto"
+        />
+      </picture>
       <Blobs
         type="header"
         colorClass="fill-secondary-300 opacity-25"
