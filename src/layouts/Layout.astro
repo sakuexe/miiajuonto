@@ -18,15 +18,12 @@ const { title } = Astro.props;
 	</head>
 	<body class="text-primary-100 bg-primary min-w-[350px] space-y-24">
 		<slot />
+    <script>
+      import "../scripts/scrollanimation.ts"
+    </script>
 	</body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
-	}
   .container {
     @apply mx-auto px-5 max-w-5xl sm:px-10 md:px-12 xl:px-0;
   }

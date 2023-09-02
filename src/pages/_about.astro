@@ -3,7 +3,8 @@ import Blobs from "../components/blobs.astro";
 ---
 
 <main
-  class="relative overflow-hidden translate-x-full transition-all duration-700 ease-in-out"
+  class="relative overflow-hidden scroll-from-left translate-x-full opacity-0 blur-sm
+  transition-all duration-700 ease-in-out motion-reduce:transition-none"
 >
   <div class="container flex flex-col items-center gap-y-5 md:flex-row">
     <div class="space-y-5 md:max-w-xs md:order-last lg:max-w-md">
@@ -25,7 +26,11 @@ import Blobs from "../components/blobs.astro";
         cursus fringilla. Morbi imperdiet dictum adipiscing amet sed ligula.
       </p>
     </div>
-    <div id="image" class="relative self-end translate-y-full transition-all duration-1000 ease-in-out delay-300 md:-mr-12 lg:mr-0 ">
+    <div
+      id="image"
+      class="relative self-end scroll-from-bottom translate-y-full blur-sm opacity-0 transition-all 
+      duration-1000 ease-in-out motion-reduce:transition-none md:delay-300 md:-mr-12 lg:mr-0"
+    >
       <img
         src="./images/amorit.png"
         alt="Miia ja Miikka, hämeenlinnan amorit"
@@ -51,31 +56,3 @@ import Blobs from "../components/blobs.astro";
     </div>
   </div>
 </main>
-
-<script>
-  const about: HTMLElement | null = document.querySelector("main");
-  const image: HTMLDivElement | null = document.querySelector("#image");
-  const padding = 700
-  const breakPoint = 768
-
-  function animateIntoView() {
-    if (!about || !image) return;
-    let isAboutShowing = false
-    if (about.getBoundingClientRect().top < padding) {
-      about.classList.remove("translate-x-full");
-      isAboutShowing = true
-    }
-    if (
-      image.getBoundingClientRect().top < padding * 1.75 ||
-      (window.innerWidth > breakPoint && isAboutShowing)
-    ) {
-      image.classList.remove("translate-y-full");
-    }
-  }
-
-  window.addEventListener("scroll", animateIntoView)
-  // check if the element is already in view on load
-  window.addEventListener("DOMContentLoaded", () => {
-    animateIntoView()
-  });
-</script>

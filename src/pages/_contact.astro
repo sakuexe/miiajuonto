@@ -5,8 +5,8 @@ import contactInfo from "../data/contactinfo.json";
 
 <article
   id="contact"
-  class="relative overflow-hidden space-y-8 opacity-0
-  transition-all duration-700 ease-in-out"
+  class="relative overflow-hidden space-y-8 fade-in opacity-0
+  transition-all duration-700 ease-in-out motion-reduce:transition-none"
 >
   <div class="container sectionheader">
     <h2>Yhteys&shy;tiedot</h2>
@@ -15,7 +15,8 @@ import contactInfo from "../data/contactinfo.json";
   <div
     id="contact-info"
     class="container flex flex-col gap-x-10 justify-center items-center 
-    translate-x-full transition-all delay-300 ease-in-out duration-700 sm:flex-row"
+    scroll-from-left translate-x-full transition-all delay-300 ease-in-out duration-700 
+    motion-reduce:transition-none sm:flex-row"
   >
     <div
       class="space-y-5 backdrop-blur-xl shadow-lg shadow-neutral-900 p-4 rounded-xl sm:max-w-sm sm:w-2/3 sm:order-last lg:w-auto"
@@ -55,8 +56,9 @@ import contactInfo from "../data/contactinfo.json";
       </div>
     </div>
     <div
-      class="image relative w-full -z-20 self-center -translate-x-full 
-      transition-all opacity-0 duration-1000 ease-in-out delay-1000 sm:w-1/3 md:w-auto"
+      class="image relative w-full -z-20 self-center scroll-from-bottom translate-y-full 
+      transition-all opacity-0 duration-1000 ease-in-out delay-300
+      motion-reduce:transition-none sm:w-1/3 md:w-auto"
     >
       <img
         src="images/contact-kuva.png"
@@ -83,37 +85,4 @@ import contactInfo from "../data/contactinfo.json";
     >
     </div>
   </div>
-
-  <script>
-    const contact: HTMLElement | null = document.querySelector("#contact");
-    const contactInfo: HTMLElement | null = document.querySelector("#contact-info");
-    const image: HTMLDivElement | null = document.querySelector(".image");
-    const padding = 700;
-    const breakPoint = 768;
-
-    function animateIntoView() {
-      if (!contact || !image) return;
-      let contactIsShowing = false;
-      if (contact.getBoundingClientRect().top < padding) {
-        contact.classList.remove("opacity-0");
-        contactIsShowing = true;
-      }
-      if (contactIsShowing) {
-        contactInfo.classList.remove("translate-x-full");
-      }
-      if (
-        image.getBoundingClientRect().top < padding * 1.75 ||
-        (window.innerWidth > breakPoint && contactIsShowing)
-      ) {
-        image.classList.remove("-translate-x-full");
-        image.classList.remove("opacity-0");
-      }
-    }
-
-    window.addEventListener("scroll", animateIntoView);
-    // check if the element is already in view on load
-    window.addEventListener("DOMContentLoaded", () => {
-      animateIntoView();
-    });
-  </script>
 </article>
