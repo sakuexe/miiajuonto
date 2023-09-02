@@ -2,11 +2,10 @@
 import Blobs from "../components/blobs.astro";
 ---
 
-<main
-  class="relative overflow-hidden scroll-from-left translate-x-full opacity-0 blur-sm
-  transition-all duration-700 ease-in-out motion-reduce:transition-none"
->
-  <div class="container flex flex-col items-center gap-y-5 md:flex-row">
+<main class="relative overflow-hidden">
+  <div
+    class="container flex flex-col items-center gap-y-5 scroll-from-left translate-x-full opacity-0 blur-sm transition-all duration-700 ease-in-out motion-reduce:transition-none md:flex-row"
+  >
     <div class="space-y-5 md:max-w-xs md:order-last lg:max-w-md">
       <div class="sectionheader">
         <h2>Esittely</h2>
@@ -28,8 +27,7 @@ import Blobs from "../components/blobs.astro";
     </div>
     <div
       id="image"
-      class="relative self-end scroll-from-bottom translate-y-full blur-sm opacity-0 transition-all 
-      duration-1000 ease-in-out motion-reduce:transition-none md:delay-300 md:-mr-12 lg:mr-0"
+      class="relative self-end scroll-from-bottom translate-y-full blur-sm opacity-0 transition-all duration-1000 ease-in-out motion-reduce:transition-none md:delay-300 md:-mr-12 lg:mr-0"
     >
       <img
         src="./images/amorit.png"
