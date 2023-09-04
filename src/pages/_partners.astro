@@ -1,5 +1,6 @@
 ---
 import Blobs from "../components/blobs.astro";
+import Others from "./_others.astro";
 import partners from "../data/partners.json";
 
 type ShowcasedPartner = {
@@ -64,6 +65,7 @@ const showcasedPartners: ShowcasedPartner[] =
       ))
     }
   </div>
+  <Others />
 </article>
 
 <script>

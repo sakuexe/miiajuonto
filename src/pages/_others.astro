@@ -32,7 +32,7 @@ const otherPartners = partners.filter((partner) => isOtherPartner(partner));
     {
       otherPartners.map((partner) => (
         <div 
-          class="relative w-32 aspect-[3/2] bg-primary-900 rounded-lg shadow-neutral-900 
+          class="relative w-28 rounded-lg shadow-neutral-900 
           shadow-lg py-4 px-5 group">
           <img
             class="w-full h-full object-contain"
@@ -47,13 +47,5 @@ const otherPartners = partners.filter((partner) => isOtherPartner(partner));
         </div>
       ))
     }
-    <div
-      class="absolute w-1/3 h-full left-0 bg-gradient-to-r from-primary to-transparent"
-    >
-    </div>
-    <div
-      class="absolute w-1/3 h-full right-0 bg-gradient-to-l from-primary to-transparent"
-    >
-    </div>
   </div>
 </section>
