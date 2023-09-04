@@ -5,8 +5,8 @@ import contactInfo from "../data/contactinfo.json";
 
 <article
   id="contact"
-  class="relative overflow-hidden space-y-8 fade-in opacity-0
-  transition-all duration-700 ease-in-out motion-reduce:transition-none"
+  class="relative overflow-hidden space-y-8 fade-in opacity-0 transition-all duration-700
+  ease-in-out motion-reduce:transition-none"
 >
   <div class="container sectionheader">
     <h2>Yhteys&shy;tiedot</h2>
@@ -14,8 +14,8 @@ import contactInfo from "../data/contactinfo.json";
   </div>
   <div
     id="contact-info"
-    class="container flex flex-col gap-x-10 justify-center items-center 
-    scroll-from-left translate-x-full transition-all delay-300 ease-in-out duration-700 
+    class="container flex flex-col gap-x-10 justify-center items-center scroll-from-right 
+    opacity-0 blur-sm -translate-x-full transition-all delay-200 ease-in-out duration-1000
     motion-reduce:transition-none sm:flex-row"
   >
     <div
@@ -55,11 +55,7 @@ import contactInfo from "../data/contactinfo.json";
         }
       </div>
     </div>
-    <div
-      class="image relative w-full -z-20 self-center scroll-from-bottom translate-y-full 
-      transition-all opacity-0 duration-1000 ease-in-out delay-300
-      motion-reduce:transition-none sm:w-1/3 md:w-auto"
-    >
+    <div class="image relative w-full -z-20 self-center sm:w-1/3 md:w-auto">
       <img
         src="images/contact-kuva.png"
         alt="kuva Miiasta hymyilemässä"
@@ -76,13 +72,13 @@ import contactInfo from "../data/contactinfo.json";
         opacity-10 -z-20 sm:-right-full"
       />
     </div>
-  </div>
-  <div
-    class="absolute w-full h-1/3 -z-10 bottom-0 left-0 bg-gradient-to-t from-primary to-transparent sm:h-2/3"
-  >
     <div
-      class="absolute w-full h-1/3 -z-10 bottom-0 left-0 bg-gradient-to-t from-primary to-transparent sm:h-1/3"
+      class="absolute w-full h-1/3 -z-10 bottom-0 left-0 bg-gradient-to-t from-primary to-transparent sm:h-2/3"
     >
+      <div
+        class="absolute w-full h-1/3 -z-10 bottom-0 left-0 bg-gradient-to-t from-primary to-transparent sm:h-1/3"
+      >
+      </div>
     </div>
   </div>
 </article>

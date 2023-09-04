@@ -24,19 +24,21 @@ const showcasedPartners: ShowcasedPartner[] =
   partners.filter(isShowcasedPartner);
 ---
 
-<article class="container space-y-8">
-  <div class="sectionheader">
+<article class="space-y-8 pl-5 md:pl-auto md:px-8">
+  <div class="sectionheader container">
     <h2 class="mb-0 leading-snug">Yhteistyö&shy;kumppaneita</h2>
   </div>
   <div
     id="carousel"
-    class="grid grid-flow-col gap-x-6 overflow-x-scroll py-5 px-2"
+    class="grid grid-flow-col max-w-min mx-auto gap-x-6 overflow-x-scroll py-5 px-2"
   >
     {
       showcasedPartners.map((partner: ShowcasedPartner, index: number) => (
         <div
           class={`flex flex-col justify-center items-center gap-y-3 w-80 p-6
             shadow-black shadow-lg rounded-xl relative overflow-hidden isolate
+            transition-all opacity-0 duration-500 fade-in delay-[${index * 200}ms]
+            blur-sm motion-reduce:transition-none
             ${index % 2 === 0 ? "bg-primary" : "bg-secondary-900"}`}
         >
           <img
@@ -69,6 +71,7 @@ const showcasedPartners: ShowcasedPartner[] =
   Script for making the product sliders at the end of the page work
   and scrollable with mouse on desktop the same way as touch on mobile
 */
+  const preloadDelay = "delay-[200ms] delay-[400ms] delay-[600ms] delay-[800ms] delay-[1000ms]"
   const slider: HTMLDivElement | null = document.querySelector("#carousel");
   let isDown: boolean = false;
   let startX: number;

@@ -8,6 +8,10 @@ function hideElement(element: HTMLElement) {
     element.classList.add("translate-x-full");
     return;
   }
+  if (element.classList.contains("scroll-from-right")) {
+    element.classList.add("-translate-x-full");
+    return;
+  }
   element.classList.add("translate-y-full");
   element.classList.add("md:delay-300");
 }
@@ -20,6 +24,10 @@ function animateElement(element: HTMLElement) {
   }
   if (element.classList.contains("scroll-from-left")) {
     element.classList.remove("translate-x-full");
+    return;
+  }
+  if (element.classList.contains("scroll-from-right")) {
+    element.classList.remove("-translate-x-full");
     return;
   }
   element.classList.remove("translate-y-full");
@@ -37,7 +45,7 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 const animationElements = document.querySelectorAll(
-  ".scroll-from-left, .scroll-from-bottom, .fade-in"
+  ".scroll-from-left, .scroll-from-right, .scroll-from-bottom, .fade-in"
 );
 
 animationElements.forEach((element) => {
