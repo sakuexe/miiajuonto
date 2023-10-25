@@ -1,30 +1,15 @@
 [
   {
-    "name": "instagram",
-    "type": "social",
-    "tag": "@miiaraussi",
-    "url": "https://www.instagram.com/miiaraussi/",
-    "icon": "instagram-logo.svg"
-  },
-  {
-    "name": "facebook",
-    "type": "social",
-    "tag": "Miia Raussi",
-    "url": "https://www.facebook.com/miia.raussi",
-    "icon": "facebook-logo.svg"
-  },
-  {
-    "name": "linkedin",
-    "type": "social",
-    "tag": "miia-raussi",
-    "url": "https://www.linkedin.com/in/miia-raussi-ba3814187/",
-    "icon": "linkedin-logo.svg"
-  },
-  {
     "name": "email",
     "type": "contact",
-    "tag": "miia.raussi@hotmail.com",
-    "url": "mailto:miia.raussi@hotmail.com",
+    "tag": "juontajaMiia@gmail.com",
+    "url": "mailto:juontajaMiia@gmail.com",
     "icon": "email.svg"
+  },
+  {
+    "name": "phone",
+    "type": "contact",
+    "tag": "040 626 0216",
+    "icon": "phone.svg"
   }
 ]

@@ -5,8 +5,7 @@ import contactInfo from "../data/contactinfo.json";
 
 <article
   id="contact"
-  class="relative overflow-hidden space-y-8 fade-in opacity-0 transition-all duration-700
-  ease-in-out motion-reduce:transition-none"
+  class="relative overflow-hidden space-y-8 fade-in opacity-0 transition-all duration-700 ease-in-out motion-reduce:transition-none"
 >
   <div class="container sectionheader">
     <h2>Yhteys&shy;tiedot</h2>
@@ -14,9 +13,7 @@ import contactInfo from "../data/contactinfo.json";
   </div>
   <div
     id="contact-info"
-    class="container flex flex-col gap-x-10 justify-center items-center scroll-from-right 
-    opacity-0 blur-sm -translate-x-full transition-all delay-200 ease-in-out duration-1000
-    motion-reduce:transition-none sm:flex-row"
+    class="container flex flex-col gap-x-10 justify-center items-center scroll-from-right opacity-0 blur-sm -translate-x-full transition-all delay-200 ease-in-out duration-1000 motion-reduce:transition-none sm:flex-row"
   >
     <div
       class="space-y-5 backdrop-blur-xl shadow-lg shadow-neutral-900 p-4 rounded-xl sm:max-w-sm sm:w-2/3 sm:order-last lg:w-auto"
@@ -35,21 +32,31 @@ import contactInfo from "../data/contactinfo.json";
                 alt={`kontakti ikoni ${contact.name}:ia varten`}
                 class="w-16 aspect-square"
               />
-              <a
-                href={contact.url}
-                target="_blank"
-                class="break-words underline-offset-4 transition-all 
+              {contact.url ? (
+                <a
+                  href={contact.url}
+                  target="_blank"
+                  class="break-words underline-offset-4 transition-all 
               flex items-center gap-x-1
               hover:text-secondary hover:underline"
-              >
-                {contact.tag}
-                <img
-                  src="./icons/target-blank.svg"
-                  alt=""
-                  role="presentation"
-                  class="inline-block w-4 stroke-red-500"
-                />
-              </a>
+                >
+                  {contact.tag}
+                  <img
+                    src="./icons/target-blank.svg"
+                    alt=""
+                    role="presentation"
+                    class="inline-block w-4 stroke-red-500"
+                  />
+                </a>
+              ) : (
+                <p
+                  class="break-words underline-offset-4 transition-all 
+                  flex items-center gap-x-1 select-all
+                  hover:text-secondary"
+                >
+                  {contact.tag}
+                </p>
+              )}
             </div>
           ))
         }

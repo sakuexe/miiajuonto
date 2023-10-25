@@ -1,28 +1,16 @@
 ---
 import Blobs from "../components/blobs.astro";
 import Others from "./_others.astro";
-import partners from "../data/partners.json";
+import showcasedPartners from "../data/partners.json";
 
 type ShowcasedPartner = {
-  business: string;
-  description: string;
   name: string;
-  logo: string;
+  business?: string;
+  description?: string;
+  logo?: string;
+  link?: string;
+  linkLabel?: string;
 };
-
-type OtherPartner = {
-  business: string;
-  logo: string;
-};
-
-function isShowcasedPartner(
-  partner: ShowcasedPartner | OtherPartner
-): partner is ShowcasedPartner {
-  return "description" in partner;
-}
-
-const showcasedPartners: ShowcasedPartner[] =
-  partners.filter(isShowcasedPartner);
 ---
 
 <article class="space-y-8 pl-5 md:pl-auto md:px-8">
@@ -38,17 +26,33 @@ const showcasedPartners: ShowcasedPartner[] =
         <div
           class={`flex flex-col justify-center items-center gap-y-3 w-80 p-6
             shadow-black shadow-lg rounded-xl relative overflow-hidden isolate
-            transition-all opacity-0 duration-500 fade-in delay-[${index * 200}ms]
+            transition-all opacity-0 duration-500 fade-in delay-[${
+              index * 200
+            }ms]
             blur-sm motion-reduce:transition-none
             ${index % 2 === 0 ? "bg-primary" : "bg-secondary-900"}`}
         >
-          <img
-            src={`./icons/${partner.logo}`}
-            alt={`${partner.business} -logo`}
-            class="w-1/2 select-none"
-            draggable="false"
-          />
-          <p class="text-center select-none">{partner.description}</p>
+          {partner.logo && (
+            <img
+              src={`./images/logos/${partner.logo}`}
+              alt={`${partner.business || partner.name} -logo`}
+              class="w-1/2 select-none grayscale rounded-md"
+              draggable="false"
+            />
+          )}
+          {partner.description && (
+            <p class="text-center select-none">{partner.description}</p>
+          )}
+          {partner.link && (
+            <a
+              href={partner.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-center select-none not-italic font-bold hover:underline"
+            >
+              {partner.linkLabel}
+            </a>
+          )}
           <div class="text-center select-none">
             <p class="italic mb">- {partner.name}</p>
             <p class="italic">{partner.business}</p>
@@ -73,7 +77,8 @@ const showcasedPartners: ShowcasedPartner[] =
   Script for making the product sliders at the end of the page work
   and scrollable with mouse on desktop the same way as touch on mobile
 */
-  const preloadDelay = "delay-[200ms] delay-[400ms] delay-[600ms] delay-[800ms] delay-[1000ms]"
+  const preloadDelay =
+    "delay-[200ms] delay-[400ms] delay-[600ms] delay-[800ms] delay-[1000ms]";
   const slider: HTMLDivElement | null = document.querySelector("#carousel");
   let isDown: boolean = false;
   let startX: number;
@@ -101,5 +106,4 @@ const showcasedPartners: ShowcasedPartner[] =
     const walk: number = (x - startX) * scrollSpeed;
     slider.scrollLeft = scrollLeft - walk;
   });
-
 </script>

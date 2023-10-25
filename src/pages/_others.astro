@@ -1,51 +1,38 @@
 ---
-import partners from "../data/partners.json";
-
-type ShowcasedPartner = {
-  business: string;
-  description: string;
-  name: string;
-  logo: string;
-};
+import otherPartners from "../data/otherpartners.json";
 
 type OtherPartner = {
   business: string;
   logo: string;
 };
-
-function isOtherPartner(
-  partner: ShowcasedPartner | OtherPartner
-): partner is OtherPartner {
-  return !("description" in partner);
-}
-
-const otherPartners = partners.filter((partner) => isOtherPartner(partner));
 ---
 
-<section class="container">
-  <div class="sectionheader">
-    <h3 class="text-center">Muita työkumppaneita</h3>
-  </div>
-  <div
-    class="relative flex flex-wrap gap-5 justify-center mx-auto py-4 md:px-16"
-  >
-    {
-      otherPartners.map((partner) => (
-        <div 
-          class="relative w-28 rounded-lg shadow-neutral-900 
-          shadow-lg py-4 px-5 group">
-          <img
-            class="w-full h-full object-contain"
-            src={`./businesses/${partner.logo}`}
-            alt={`yrityksen ${partner.logo} -logo`}
-          />
-          <p 
-            class="absolute -bottom-10 left-1/2 -translate-x-1/2 w-full py-1 px-2 bg-primary-900
-            rounded-lg text-center z-10 opacity-0 transition-all ease-in-out group-hover:opacity-100">
-            {partner.business}
-          </p>
-        </div>
-      ))
-    }
-  </div>
-</section>
+{
+  otherPartners.length > 0 && (
+    <section class="container">
+      <div class="sectionheader">
+        <h3 class="text-center">Muita työkumppaneita</h3>
+      </div>
+      <div class="relative flex flex-wrap gap-5 justify-center mx-auto py-4 md:px-16">
+        {otherPartners.map((partner: OtherPartner) => (
+          <div
+            class="relative w-28 rounded-lg shadow-neutral-900 
+          shadow-lg py-4 px-5 group"
+          >
+            <img
+              class="w-full h-full object-contain"
+              src={`./businesses/${partner.logo}`}
+              alt={`yrityksen ${partner.logo} -logo`}
+            />
+            <p
+              class="absolute -bottom-10 left-1/2 -translate-x-1/2 w-full py-1 px-2 bg-primary-900
+            rounded-lg text-center z-10 opacity-0 transition-all ease-in-out group-hover:opacity-100"
+            >
+              {partner.business}
+            </p>
+          </div>
+        ))}
+      </div>
+    </section>
+  )
+}

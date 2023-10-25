@@ -1,46 +1,21 @@
 [
   {
-    "business": "Yritys #1",
-    "description": "Faucibus sed nec ipsum ac purus. Quam lacus nisl tincidunt cursus consectetur. Lorem aenean purus quam massa. Nunc non elementum nisi in justo eget placerat purus. Pretium feugiat egestas porttitor enim amet est at penatibus augue.",
-    "name": "Etunimi Sukunimi",
-    "logo": "placeholder1.svg"
+    "name": "Miikka J. Anttila",
+    "business": "Tuottaja, Näyttelijä",
+    "logo": "mjanttila-logo.webp",
+    "link": "https://www.miikkajanttila.com",
+    "linkLabel": "www.miikkajanttila.com"
   },
   {
-    "business": "Yritys #2",
-    "description": "Faucibus sed nec ipsum ac purus. Quam lacus nisl tincidunt cursus consectetur. Lorem aenean purus quam massa. Nunc non elementum nisi in justo eget placerat purus",
-    "name": "Etunimi Sukunimi",
-    "logo": "placeholder2.svg"
+    "business": "Koti-iskä88",
+    "name": "Ville Viholainen",
+    "link": "https://www.instagram.com/koti_iska88official/",
+    "logo": "koti-iskä88.jpg",
+    "linkLabel": "@koti-iskä88official"
   },
   {
-    "business": "Yritys #1",
-    "description": "Faucibus sed nec ipsum ac purus. Quam lacus nisl tincidunt cursus consectetur. Lorem aenean purus quam massa. Nunc non elementum nisi in justo eget placerat purus. Pretium feugiat egestas porttitor enim amet est at penatibus augue.",
-    "name": "Etunimi Sukunimi",
-    "logo": "placeholder1.svg"
-  },
-  {
-    "business": "Yritys #2",
-    "description": "Faucibus sed nec ipsum ac purus. Quam lacus nisl tincidunt cursus consectetur. Lorem aenean purus quam massa. Nunc non elementum nisi in justo eget placerat purus",
-    "name": "Etunimi Sukunimi",
-    "logo": "placeholder2.svg"
-  },
-  {
-    "business": "Yritys #3",
-    "logo": "placeholder-square.svg"
-  },
-  {
-    "business": "Yritys #4",
-    "logo": "placeholder-square-2.svg"
-  },
-  {
-    "business": "Yritys #5",
-    "logo": "placeholder-square.svg"
-  },
-  {
-    "business": "Yritys #6",
-    "logo": "placeholder-square-2.svg"
-  },
-  {
-    "business": "Yritys #7",
-    "logo": "placeholder-square.svg"
+    "name": "Sari Villenius",
+    "link": "https://www.iltalehti.fi/musiikki/a/c3cc5280-f3df-4be5-bf38-17fe46ad2839",
+    "linkLabel": "IS: Sari Villenius"
   }
 ]
