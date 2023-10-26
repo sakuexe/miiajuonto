@@ -1,13 +1,11 @@
 ---
 import Blobs from "../components/blobs.astro";
 import contactInfo from "../data/contactinfo.json";
-
-const socials = contactInfo.filter((item) => item.type === "social");
 ---
 
 <header class="relative overflow-hidden pt-14">
   <div class="container flex flex-col justify-between gap-y-3 md:flex-row">
-    <div class="space-y-3 z-10 max-w-xl md:max-w-md lg:max-w-xl self-center">
+    <div class="space-y-3 z-10 max-w-xl md:max-w-xs lg:max-w-xl self-center">
       <h1
         class="text-[6rem] leading-[0.85] font-bold text-gradient select-none"
       >
@@ -16,20 +14,21 @@ const socials = contactInfo.filter((item) => item.type === "social");
       <p class="text-3xl leading-[1.2]">Juontaja</p>
       <p class="opacity-80">
         Juontajana olen iloinen ja empaattinen energisyyttä unohtamatta! Kun
-        haluat tilaisuuteesi – isoon tai pieneen sellaiseen rytmin ja rakenteen
-        sekä sujuvan kulun – ole yhteydessä ja yksi osa-alue on poissa
-        harteiltasi ja voit keskittyä tilaisuuteen ja vieraisiisi! Juonnan
-        mielelläni niin synttärit kuin polttarit ja yritystilaisuudet. Kysy
-        tarjous!
+        haluat tilaisuuteesi, isoon tai pieneen, sellaiseen rytmin ja rakenteen
+        sekä sujuvan kulun
+      </p>
+      <p class="opacity-80">
+        Ole yhteydessä ja yksi osa-alue on poissa harteiltasi ja voit keskittyä
+        tilaisuuteen ja vieraisiisi! Juonnan mielelläni niin synttärit kuin
+        polttarit ja yritystilaisuudet. Kysy tarjous!
       </p>
       <div
         class="absolute bottom-0 left-0 flex gap-x-3 px-8 [&>a>img]:w-7 [&>a>img]:aspect-square md:static md:px-0"
       >
         {
-          socials.map((social) => (
+          contactInfo.map((social) => (
             <a
-              href={social.url}
-              target="_blank"
+              href="#contact"
               class="relative transition-all group hover:brightness-75"
             >
               <img src={`./icons/${social.icon}`} alt={`${social.name} logo`} />
@@ -45,15 +44,12 @@ const socials = contactInfo.filter((item) => item.type === "social");
         }
       </div>
     </div>
-    <div class="relative md:pt-8">
-      <picture class="self-end w-full mx-auto">
-        <source media="(min-width: 768px)" srcset="./images/amorkuva.png" />
-        <img
-          src="./images/amorkuva.png"
-          alt="Kuva Miiasta amor asussaan"
-          class="max-w-md mx-auto"
-        />
-      </picture>
+    <div class="relative self-end md:pt-8">
+      <img
+        src="./images/contact.webp"
+        alt="Kuva Miiasta amor asussaan"
+        class="max-w-md self-end w-full mx-auto max-h-[600px]"
+      />
       <Blobs
         type="header"
         colorClass="fill-secondary-300 opacity-25"

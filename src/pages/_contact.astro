@@ -9,20 +9,15 @@ import contactInfo from "../data/contactinfo.json";
 >
   <div class="container sectionheader">
     <h2>Yhteys&shy;tiedot</h2>
-    <p>Ollaan yhteydessä</p>
+    <p>Ota yhteyttä ja pyydä tarjous</p>
   </div>
   <div
     id="contact-info"
     class="container flex flex-col gap-x-10 justify-center items-center scroll-from-right opacity-0 blur-sm -translate-x-full transition-all delay-200 ease-in-out duration-1000 motion-reduce:transition-none sm:flex-row"
   >
     <div
-      class="space-y-5 backdrop-blur-xl shadow-lg shadow-neutral-900 p-4 rounded-xl sm:max-w-sm sm:w-2/3 sm:order-last lg:w-auto"
+      class="space-y-5 backdrop-blur-xl shadow-lg shadow-neutral-900 p-4 rounded-xl sm:max-w-sm sm:w-2/3 lg:w-auto"
     >
-      <p class="opacity-80">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima quae
-        dignissimos atque ut quisquam illo fugit, quos eligendi reprehenderit
-        sapiente!
-      </p>
       <div class="flex flex-col items-start gap-3">
         {
           contactInfo.map((contact) => (
@@ -64,28 +59,27 @@ import contactInfo from "../data/contactinfo.json";
     </div>
     <div class="image relative w-full -z-20 self-center sm:w-1/3 md:w-auto">
       <img
-        src="images/contact-kuva.png"
+        src="images/amorkuva.png"
         alt="kuva Miiasta hymyilemässä"
-        class="mx-auto max-h-[500px] sm:w-full"
+        class="mx-auto max-h-[400px] sm:w-full"
       />
       <Blob
         type="contacts"
-        className="absolute bottom-0 -left-10 h-5/6 opacity-25 -z-20 \
-        sm:-left-1/3"
+        className="absolute bottom-0 -left-10 h-5/6 opacity-25 -z-20"
       />
       <Blob
         type="contacts"
-        className="absolute -bottom-8 -right-32 h-full -rotate-[60deg] \
-        opacity-10 -z-20 sm:-right-full"
+        className="absolute -bottom-8 -right-0 h-full -rotate-[60deg] \
+        opacity-10 -z-20 sm:-right-1/4"
       />
     </div>
     <div
-      class="absolute w-full h-1/3 -z-10 bottom-0 left-0 bg-gradient-to-t from-primary to-transparent sm:h-2/3"
+      class="absolute w-full h-1/3 -z-10 bottom-0 left-0 bg-gradient-to-t from-primary to-transparent sm:h-1/4"
     >
-      <div
-        class="absolute w-full h-1/3 -z-10 bottom-0 left-0 bg-gradient-to-t from-primary to-transparent sm:h-1/3"
-      >
-      </div>
+    </div>
+    <div
+      class="absolute w-full h-1/3 -z-10 bottom-0 left-0 bg-gradient-to-t from-primary to-transparent sm:h-1/3"
+    >
     </div>
   </div>
 </article>
