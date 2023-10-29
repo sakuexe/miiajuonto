@@ -6,6 +6,6 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), react()],
-  site: "https://sakuexe.github.io",
-  base: "/miiajuonto",
+  // site: "https://sakuexe.github.io",
+  // base: "/miiajuonto",
 });
