@@ -3,51 +3,54 @@
     "title": "Linnan Business Turnajaiset",
     "image": "linnanbisnesturnajaiset_2023.jpg",
     "alt": "Kuva Miiasta juontamassa Linnan Business Turnajaisia",
-    "host": "Hämeenlinnan Leijonan Luola – Linnan Kehitys Oy"
+    "host": "Hämeenlinnan Leijonan Luola – Linnan Kehitys Oy",
+    "date": "2022 & 2023"
   },
   {
     "title": "Hämeen sukukokous",
-    "host": "Linnan Kehitys Oy"
+    "host": "Linnan Kehitys Oy",
+    "date": "2022"
   },
   {
     "title": "Hämeen Ääni -laulukilpailu",
-    "host": "Ravintola Skogster"
+    "host": "Ravintola Skogster",
+    "date": "2023"
   },
   {
     "title": "Valtakunnalliset Opo-päivät",
-    "date": "pp.kk.vvvv"
+    "date": "2023"
   },
   {
     "title": "Speed Dating",
-    "date": "pp.kk.vvvv",
-    "host": "Ravintola Skogster"
+    "host": "Ravintola Skogster",
+    "date": "2022 & 2023"
   },
   {
     "title": "Assi-Sairaalan harjannostajaiset",
-    "date": "pp.kk.vvvv"
+    "date": "2023"
   },
   {
     "title": "Hyväntekeväisyys muotinäytös",
-    "date": "pp.kk.vvvv",
-    "host": "Hämeeninnan Naisleijonat"
+    "host": "Hämeenlinnan Naisleijonat",
+    "date": "2023"
   },
   {
     "title": "Joulunavaus-tapahtuma",
-    "date": "pp.kk.vvvv",
-    "host": "Kauppapaikka Tavastila"
+    "host": "Kauppapaikka Tavastila",
+    "date": "2022"
   },
   {
     "title": "Herkkujen Häme ja Hämeensanomien Sanomien Tähtitapahtuma",
-    "date": "pp.kk.vvvv"
+    "date": "2023"
   },
   {
     "title": "Tekijä-tapahtumat",
-    "date": "pp.kk.vvvv",
-    "host": "Työllistymisen, oppimisen ja verkostoitumisen suurtapahtuma"
+    "host": "Työllistymisen, oppimisen ja verkostoitumisen suurtapahtuma",
+    "date": "2022 & 2023"
   },
   {
-    "title": "Sexhibition 2023-messut",
-    "date": "pp.kk.vvvv",
-    "host": "Kaapelitehdas"
+    "title": "Sexhibition-messut",
+    "host": "Kaapelitehdas",
+    "date": "2023"
   }
 ]

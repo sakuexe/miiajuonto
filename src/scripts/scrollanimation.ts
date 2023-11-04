@@ -45,7 +45,7 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 const animationElements = document.querySelectorAll(
-  ".scroll-from-left, .scroll-from-right, .scroll-from-bottom, .fade-in"
+  ".scroll-from-left, .scroll-from-right, .scroll-from-bottom, .fade-in",
 );
 
 animationElements.forEach((element) => {

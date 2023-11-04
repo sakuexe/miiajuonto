@@ -1,0 +1,69 @@
+---
+import Blobs from "../components/blobs.astro";
+---
+
+<main id="esittely" class="relative overflow-hidden">
+  <div class="container mb-5 space-y-5">
+    <div class="sectionheader">
+      <h2 class="leading-[1] pb-2">Miia ja Miikka</h2>
+      <p>Hämeenlinnan Amorit</p>
+    </div>
+    <p class="opacity-80">
+      Jos haluat tapahtumallesi tunnelman nostatusta ja pientä hassuttelua,
+      kannattaa tilata Amorit AmoreMiia ja MrLove Miikka paikalle. Amorit
+      rakastuttavat luennon aiheisiin, aktiviteetteihin ja takaavat
+      tapahtumallesi iloisen tunnelman. Tältä kaksikolta hoituu erilaisten
+      personoitujen sisältöjen tilaaminen tapahtumiin kuten
+      improvisaatioharjoitukset ja Speed dating. Ota rohkeasti yhteyttä niin
+      suunnitellaan juuri teidän tarpeeseen sopiva kokonaisuus, jossa ilo ja
+      nauru on varmasti läsnä!
+    </p>
+  </div>
+
+  <div
+    class="container flex flex-col items-center gap-y-5 scroll-from-left translate-x-full opacity-0 blur-sm transition-all duration-700 ease-in-out motion-reduce:transition-none md:flex-row"
+  >
+    <div class="space-y-5 z-10 md:max-w-xs lg:max-w-md">
+      <p class="opacity-80">
+        <b>Miia Raussin</b> ja <b>Miikka J Anttilan</b> voit tilata tapahtumaasi juontajiksi,
+        kun haluat varmistua tapahtumasi sujuvasta etenemisestä, luotettavasta
+        sekä joustavasta yhteistyöstä. Tämä kaksikko on hoitanut yhdessä
+        suurtapahtumia sekä pienempiä kokonaisuuksia. Tämä kaksikko onnistuu
+        toteuttamaan juuri teidän tarpeisiinne sopivan juontokokonaisuuden, joka
+        takaa kuulijoiden viihtyvyyden koko tapatuman ajan. Älä enää mieti vaan
+        ota yhteyttä ja tehdään tapahtumasta onnistunut - tapahtuma, joka
+        muistetaan vielä pitkään tilaisuuden jälkeenkin!
+      </p>
+    </div>
+
+    <div
+      id="image"
+      class="relative self-end scroll-from-bottom translate-y-full blur-sm opacity-0 transition-all duration-1000 ease-in-out motion-reduce:transition-none md:delay-300 md:-mr-12 lg:mr-0"
+    >
+      <img
+        src="./images/amorit.png"
+        alt="Miia ja Miikka, hämeenlinnan amorit"
+      />
+      <Blobs
+        type="about-2"
+        className="absolute -bottom-10 -left-20 scale-90 translate-y-20 opacity-25 -z-20 \
+        md:translate-y-10 md:max-w-xl lg:max-w-2xl lg:rotate-12"
+      />
+      <Blobs
+        type="about-1"
+        className="absolute -bottom-12 -right-14 -rotate-6 translate-y-20 opacity-10 -z-20 \
+        md:translate-y-0 md:max-w-lg xl:max-w-lg"
+      />
+    </div>
+
+    <div
+      class="absolute bottom-0 left-0 h-1/4 w-full bg-gradient-to-t from-primary to-transparent"
+    >
+    </div>
+
+    <div
+      class="absolute bottom-0 left-0 h-full w-full bg-gradient-to-l from-primary to-transparent -z-10"
+    >
+    </div>
+  </div>
+</main>

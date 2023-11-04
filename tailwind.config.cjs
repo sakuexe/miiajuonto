@@ -84,14 +84,14 @@ module.exports = {
     },
   },
   plugins: [
-    plugin(function({ matchUtilities, theme }) {
+    plugin(function ({ matchUtilities, theme }) {
       matchUtilities(
         {
           "text-shadow": (value) => ({
             textShadow: value,
           }),
         },
-        { values: theme("textShadow") }
+        { values: theme("textShadow") },
       );
     }),
   ],
