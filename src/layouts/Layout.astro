@@ -1,27 +1,45 @@
---- 
+---
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/png" href="./favicon.png" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body class="text-primary-100 bg-primary min-w-[350px] space-y-24">
-		<slot />
+<html lang="fi" class="scroll-smooth">
+  <head>
+    <title>{title}</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="./favicon.png" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="Miia Raussi on empaattinen, iloinen ja energinen juontaja Hämeenlinnasta.
+      Jätä yksi osa-alue lisää pois harteiltasi ja keskity tilaisuuteen sekä vieraisiisi. 
+      Tilaa siis Miia tilaisuuteesi, niin voit olla varma että tilaisuus sujuu 
+      suunnitellusti ja että yleisö viihtyy! Ole yhteydessä ja kysy tarjous"
+    />
+    <meta name="keywords" content="juontaja, hämeenlinna, miia raussi, energinen, iloinen, empaattinen" />
+    <!-- Social media links -->
+    <meta property="og:title" content="Miia Raussi - Juontaja" />
+    <meta property="og:site_name" content="Miia Raussi - Juontaja" />
+    <meta property="og:url" content="https://miiaraussi.com/" />
+    <meta property="og:image" content="./miiaraussi-banner.webp" />
+    <meta property="og:description" content="Miia Raussi on empaattinen, iloinen ja energinen juontaja Hämeenlinnasta.
+      Jätä yksi osa-alue lisää pois harteiltasi ja keskity tilaisuuteen sekä vieraisiisi. 
+      Tilaa siis Miia tilaisuuteesi, niin voit olla varma että tilaisuus sujuu 
+      suunnitellusti ja että yleisö viihtyy! Ole yhteydessä ja kysy tarjous" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fi_FI" />
+  </head>
+  <body class="text-primary-100 bg-primary min-w-[350px] space-y-24">
+    <slot />
     <script>
-      import "../scripts/scrollanimation.ts"
+      import "../scripts/scrollanimation.ts";
     </script>
-	</body>
+  </body>
 </html>
 <style is:global>
   .container {
@@ -31,15 +49,15 @@ const { title } = Astro.props;
     @apply bg-clip-text text-transparent bg-gradient-to-r from-secondary to-secondary-300;
   }
   .sectionheader > h2 {
-    font-size: 3rem; 
+    font-size: 3rem;
     margin-bottom: -0.7rem;
     @apply font-bold text-gradient;
   }
   .sectionheader > h3 {
-    font-size: 1.75rem; 
+    font-size: 1.75rem;
     @apply font-bold text-gradient;
   }
   .sectionheader > p {
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
   }
 </style>
