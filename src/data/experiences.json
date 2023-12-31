@@ -7,23 +7,43 @@
     "date": "2022 & 2023"
   },
   {
+    "title": "Sexhibition-messut",
+    "host": "Kaapelitehdas",
+    "date": "2023",
+    "image": "sexhibition.jpg",
+    "alt": "Miia juontamassa Sexhibition-messuja mikrofoni kädessä",
+    "link": "https://sexhibition.fi/"
+  },
+  {
     "title": "Hämeen sukukokous",
     "host": "Linnan Kehitys Oy",
-    "date": "2022"
+    "date": "2022",
+    "image": "sukukokous.jpg",
+    "alt": "Miia juontamassa Hämeen sukukokousta",
+    "link": "https://www.linnan.fi/yrityspalvelut/hameen-sukukokous-2024/"
   },
   {
     "title": "Hämeen Ääni -laulukilpailu",
     "host": "Ravintola Skogster",
-    "date": "2023"
+    "date": "2023",
+    "image": "hameen-aani.jpg",
+    "alt": "Miia juontamassa Hämeen Ääni -laulukilpailua, juontopapaperit suussa",
+    "link": "https://www.hameenlinnankaupunkiuutiset.fi/paikalliset/6189577"
   },
   {
     "title": "Valtakunnalliset Opo-päivät",
-    "date": "2023"
+    "date": "2023",
+    "image": "opopaivat.jpg",
+    "alt": "Miia ja Miikka Hämeen amoreina Valtakunnallisilla Opo-päivillä juontopaperit kädessä lavalla",
+    "link": "https://opopaivat2022.wordpress.com/ohjelmalehti/"
   },
   {
     "title": "Speed Dating",
     "host": "Ravintola Skogster",
-    "date": "2022 & 2023"
+    "date": "2022 & 2023",
+    "image": "speed-dating.jpg",
+    "alt": "Miia ja Miikka eli Hämeen Amorit Speed Dating -tapahtumassa osoittamassa kameraa",
+    "link": "https://barskogster.fi/love-party/"
   },
   {
     "title": "Assi-Sairaalan harjannostajaiset",
@@ -40,17 +60,18 @@
     "date": "2022"
   },
   {
-    "title": "Herkkujen Häme ja Hämeensanomien Sanomien Tähtitapahtuma",
-    "date": "2023"
+    "title": "Herkkujen Häme",
+    "host": "ja Hämeensanomien Sanomien Tähtitapahtuma",
+    "date": "2023",
+    "image": "herkkujen-hame.jpg",
+    "alt": "Selfie Miiasta tapahtuman lavan vieressä, taustalla yleisöä"
   },
   {
     "title": "Tekijä-tapahtumat",
     "host": "Työllistymisen, oppimisen ja verkostoitumisen suurtapahtuma",
-    "date": "2022 & 2023"
-  },
-  {
-    "title": "Sexhibition-messut",
-    "host": "Kaapelitehdas",
-    "date": "2023"
+    "date": "2022 & 2023",
+    "image": "tekija.jpg",
+    "alt": "Miia ja Enni Laukkanen juontamassa Tekijä-tapahtumaa rappusilla mikrofonit kädessä",
+    "link": "https://tekijatapahtuma.fi/"
   }
 ]

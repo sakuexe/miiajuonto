@@ -6,6 +6,7 @@ type Experience = {
   image?: string;
   alt?: string;
   host?: string;
+  link?: string;
 };
 ---
 
@@ -17,7 +18,11 @@ type Experience = {
   <div class="relative grid grid-cols-fluid gap-5 overflow-hidden max-h-96">
     {
       experiences.map((experience: Experience) => (
-        <div class="relative rounded-lg overflow-hidden aspect-square drop-shadow-2xl">
+        <a
+          href={experience.link}
+          target="_blank"
+          class="relative rounded-lg overflow-hidden aspect-square drop-shadow-2xl"
+        >
           {experience.image ? (
             <img
               src={`./images/experiences/${experience.image}`}
@@ -37,13 +42,22 @@ type Experience = {
             </div>
           )}
           <div class="absolute bottom-0 w-full text-center py-2 px-4 z-10">
-            <h4 class="text-xl font-bold leading-[1.1] shadow-black text-shadow-sm">{experience.title}</h4>
+            <h4 class="text-xl font-bold leading-[1.1] shadow-black text-shadow-sm">
+              {experience.title}
+            </h4>
             {experience.host && <p>{experience.host}</p>}
             {experience.date && <p>{experience.date}</p>}
           </div>
+          {experience.link && (
+            <img
+              src="./icons/external-link.svg"
+              alt="Ikoni ulkoiselle linkille"
+              class="absolute top-0 right-0 m-2 w-6 h-6 drop-shadow-md"
+            />
+          )}
           <div class="w-full h-full bg-secondary absolute inset-0 m-auto mix-blend-color opacity-25" />
-          <div class="w-full h-1/2 bg-gradient-to-t from-primary to-transparent absolute bottom-0 left-0" />
-        </div>
+          <div class="w-full h-full bg-gradient-to-t from-primary to-transparent absolute bottom-0 left-0" />
+        </a>
       ))
     }
     <button

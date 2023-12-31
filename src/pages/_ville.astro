@@ -1,0 +1,65 @@
+---
+import Blobs from "../components/blobs.astro";
+---
+
+<main id="esittely" class="relative overflow-hidden">
+  <div class="container mb-5 space-y-5">
+    <div class="sectionheader">
+      <h2 class="leading-[1] pb-2">Miia ja Ville</h2>
+      <p>Sydämmellistä huumoria ja rauhallista charmia</p>
+    </div>
+    <p class="opacity-80">
+      <b class="text-secondary-300">Miia</b> on aurinkoinen persoona, jonka hymy
+      valaisee koko tilan. Hänen vahvuutensa juontajana piilee huumorissa ja spontaaniudessa.
+      Miia osaa saada yleisön nauramaan, mutta samalla hän osaa myös välittää sydämellisyyttä
+      ja lämpöä. Hän on monipuolinen esiintyjä, joka tempaa mukaansa heti ensimmäisestä
+      hetkestä. Villen rauhallisuus ja charmikkuus luovat vastapainoa Miian energialle.
+    </p>
+    <p class="opacity-80">
+      <b class="text-secondary-300">Ville</b> on taitava kertoja, joka osaa kuljettaa
+      kuulijansa tarinan mukana. Hänen ammattitaitonsa ja vuorovaikutustaitonsa tekevät
+      tilaisuudesta kuin tilaisuudesta ikimuistoisen. Ville on juontaja, jonka läsnäolo
+      rauhoittaa ja viihdyttää. Miia ja Ville muodostavat dynaamisen juontajaduon,
+      joka saa tapahtumasi kukoistamaan. Heidän yhteistyönsä synkkaa saumattomasti,
+      ja yleisö tuntee välittömästi, että heillä on käsissään jotain erityistä. Olipa
+      kyseessä sitten yritystilaisuus, gaala, häät tai mikä tahansa muu tapahtuma,
+      Miia ja Ville tuovat siihen oman ainutlaatuisen tunnelmansa.
+    </p>
+    <p>
+      Katso video Linna Business Turnajaisista jossa Miia ja Ville juontavat! <a
+        href="https://www.youtube.com/watch?v=3UJ--nPYRVI"
+        target="_blank"
+        class="text-secondary-300">Linkki videoon</a
+      >
+    </p>
+  </div>
+
+  <div
+    class="container flex flex-col items-center gap-y-5 scroll-from-left translate-x-full opacity-0 blur-sm transition-all duration-700 ease-in-out motion-reduce:transition-none md:flex-row"
+  >
+    <div
+      id="image"
+      class="relative self-end scroll-from-bottom translate-y-full blur-sm opacity-0 transition-all duration-1000 ease-in-out motion-reduce:transition-none md:delay-300 md:-mr-12 lg:mr-0"
+    >
+      <img
+        src="./images/miia-ja-ville.webp"
+        alt="Miia ja Miikka, hämeenlinnan amorit"
+      />
+      <Blobs
+        type="about-2"
+        className="absolute -bottom-10 -left-12 scale-90 translate-y-20 opacity-10 -z-20 \
+        md:translate-y-10 md:max-w-xl lg:max-w-2xl lg:rotate-12"
+      />
+      <Blobs
+        type="about-1"
+        className="absolute -bottom-12 -right-10 -rotate-6 translate-y-20 opacity-25 -z-20 \
+        md:translate-y-0 md:max-w-lg xl:max-w-lg"
+      />
+    </div>
+
+    <div
+      class="absolute bottom-0 left-0 h-1/4 w-full bg-gradient-to-t from-primary to-transparent"
+    >
+    </div>
+  </div>
+</main>
